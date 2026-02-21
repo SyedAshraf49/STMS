@@ -33,7 +33,7 @@ const NotificationBell: React.FC = () => {
                 )}
             </button>
             {isOpen && (
-                <div className="absolute right-0 mt-2 w-96 bg-white dark:bg-gray-800 rounded-lg shadow-xl overflow-hidden z-10 border border-gray-200 dark:border-gray-700">
+              <div className="absolute right-0 mt-2 w-[calc(100vw-1rem)] max-w-96 sm:w-96 bg-white dark:bg-gray-800 rounded-lg shadow-xl overflow-hidden z-10 border border-gray-200 dark:border-gray-700">
                     <div className="py-3 px-4 bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-semibold flex items-center gap-2">
                         <BellIcon className="h-5 w-5" />
                         {t('header.notifications')}
@@ -129,7 +129,7 @@ const Header: React.FC<HeaderProps> = ({ setSidebarOpen }) => {
 
   return (
     <header className="sticky top-0 z-40 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 shadow-sm animate-slide-in-down">
-      <div className="flex items-center justify-between px-4 sm:px-6 py-4">
+      <div className="flex items-center justify-between px-3 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center gap-4">
           <button
             onClick={() => setSidebarOpen(true)}
@@ -143,7 +143,7 @@ const Header: React.FC<HeaderProps> = ({ setSidebarOpen }) => {
           </div>
         </div>
 
-        <div className="flex items-center gap-2 sm:gap-6">
+        <div className="flex items-center gap-1 sm:gap-6">
           <LanguageSelector />
           <button
             onClick={toggleColorTheme}
@@ -160,6 +160,14 @@ const Header: React.FC<HeaderProps> = ({ setSidebarOpen }) => {
             {theme === 'light' ? <MoonIcon className="h-5 w-5" /> : <SunIcon className="h-5 w-5" />}
           </button>
           <NotificationBell />
+          <button
+            onClick={logout}
+            className="sm:hidden p-2 text-gray-600 dark:text-gray-400 hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-red-600 dark:hover:text-red-400 rounded-lg transition-colors hover-lift"
+            title={t('common.logout')}
+            aria-label={t('common.logout')}
+          >
+            <LogoutIcon className="h-5 w-5" />
+          </button>
           <div className="hidden sm:flex items-center gap-3 pl-4 border-l border-gray-200 dark:border-gray-700">
             <div className="text-right">
               <p className="font-semibold text-gray-800 dark:text-gray-200 text-sm">{user?.name}</p>
