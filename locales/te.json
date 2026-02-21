@@ -1,0 +1,252 @@
+{
+  "common": {
+    "dashboard": "డాష్‌బోర్డ్",
+    "students": "విద్యార్థులు",
+    "attendance": "హాజరు",
+    "reports": "నివేదికలు",
+    "leave": "సెలవు",
+    "timetable": "కాలపట్టిక",
+    "feedback": "అభిప్రాయం",
+    "logout": "లాగ్ అవుట్",
+    "welcomeMessage": "తిరిగి స్వాగతం, {0}!",
+    "name": "పేరు",
+    "rollNumber": "రోల్ నంబర్",
+    "class": "తరగతి",
+    "department": "విభాగం",
+    "actions": "చర్యలు",
+    "edit": "సవరించు",
+    "delete": "తొలగించు",
+    "save": "సేవ్ చేయి",
+    "cancel": "రద్దు చేయి",
+    "close": "మూసివేయి",
+    "submit": "సమర్పించు",
+    "present": "హాజరు",
+    "absent": "గైర్హాజరు",
+    "late": "ఆలస్యం",
+    "onLeave": "సెలవులో",
+    "pending": "పెండింగ్‌లో ఉంది",
+    "approved": "ఆమోదించబడింది",
+    "rejected": "తిరస్కరించబడింది",
+    "status": {
+        "Present": "హాజరు",
+        "Absent": "గైర్హాజరు",
+        "Late": "ఆలస్యం",
+      "LatePresent": "ఆలస్యం + హాజరు",
+        "Leave": "సెలవులో",
+        "Pending": "పెండింగ్‌లో ఉంది",
+        "Approved": "ఆమోదించబడింది",
+        "Rejected": "తిరస్కరించబడింది"
+    },
+    "announcements": "ప్రకటనలు",
+    "byAuthor": "{0} ద్వారా",
+    "statusTitle": "స్థితి"
+  },
+  "login": {
+    "title": "హాజరు నిర్వహణ వ్యవస్థ",
+    "emailLabel": "ఇమెయిల్ చిరునామా",
+    "emailPlaceholder": "user@example.com",
+    "roleLabel": "పాత్ర",
+    "signInButton": "సైన్ ఇన్",
+    "demoNote": "(ఇది ఒక డెమో. ఏదైనా ఇమెయిల్ పనిచేస్తుంది.)",
+    "roles": {
+        "student": "విద్యార్థి",
+        "teacher": "ఉపాధ్యాయుడు",
+        "admin": "నిర్వాహకుడు",
+        "parent": "తల్లిదండ్రులు"
+    }
+  },
+  "header": {
+    "notifications": "నోటిఫికేషన్‌లు",
+    "noNotifications": "కొత్త నోటిఫికేషన్‌లు లేవు",
+    "language": "భాష"
+  },
+  "sidebar": {
+    "adminPanel": "నిర్వాహక ప్యానెల్",
+    "studentApp": "విద్యార్థి యాప్",
+    "teacherApp": "ఉపాధ్యాయ యాప్",
+    "parentPortal": "తల్లిదండ్రుల పోర్టల్",
+    "attendanceCode": "హాజరు కోడ్",
+    "attendanceReport": "హాజరు నివేదిక",
+    "leaveRequests": "సెలవు అభ్యర్థనలు"
+  },
+  "feedback": {
+    "title": "అభిప్రాయం సమర్పించండి",
+    "ratingLabel": "మీ అనుభవాన్ని ఎలా రేట్ చేస్తారు?",
+    "categoryLabel": "వర్గం",
+    "category": {
+        "general": "సాధారణ అభిప్రాయం",
+        "bug": "బగ్ నివేదిక",
+        "feature": "ఫీచర్ అభ్యర్థన",
+        "ui_ux": "UI/UX సూచన"
+    },
+    "commentsLabel": "వ్యాఖ్యలు",
+    "commentsPlaceholder": "మాకు మరింత చెప్పండి...",
+    "submissionConfirmation": "మీ అభిప్రాయానికి ధన్యవాదాలు!"
+  },
+  "dashboard": {
+    "admin": {
+      "pageTitle": "నిర్వాహక డాష్‌బోర్డ్",
+      "totalStudents": "మొత్తం విద్యార్థులు",
+      "totalStudentsDesc": "అన్ని విభాగాలలో",
+      "todayAttendance": "నేటి హాజరు",
+      "todayAttendanceDesc": "{0} మంది విద్యార్థులు హాజరయ్యారు",
+      "pendingLeaves": "పెండింగ్‌లో ఉన్న సెలవు అభ్యర్థనలు",
+      "pendingLeavesDesc": "ఆమోదం అవసరం",
+      "classWiseAttendance": "తరగతి వారీగా హాజరు అవలోకనం"
+    },
+    "teacher": {
+      "pageTitle": "ఉపాధ్యాయ డాష్‌బోర్డ్",
+      "myClasses": "నా తరగతులు",
+      "myStudents": "నా విద్యార్థులు",
+      "myStudentsDesc": "నా అన్ని తరగతులలో",
+      "pendingLeaves": "పెండింగ్‌లో ఉన్న సెలవు అభ్యర్థనలు",
+      "pendingLeavesDesc": "నా విద్యార్థుల నుండి",
+      "upcomingEvents": "రాబోయే ఈవెంట్‌లు/పరీక్షలు",
+       "events": {
+        "event1": "మధ్యంతర పరీక్షలు వచ్చే సోమవారం నుండి ప్రారంభమవుతాయి.",
+        "event2": "డేటా స్ట్రక్చర్స్ ప్రాజెక్ట్ సమర్పణకు 2 వారాల గడువు ఉంది.",
+        "event3": "తల్లిదండ్రుల-ఉపాధ్యాయుల సమావేశం శుక్రవారం."
+      }
+    },
+    "student": {
+      "pageTitle": "విద్యార్థి డాష్‌బోర్డ్",
+      "myAttendance": "నా హాజరు",
+      "days": "{0} / {1} రోజులు",
+      "myLeaveRequests": "నా సెలవు అభ్యర్థనలు",
+      "approved": "{0} ఆమోదించబడినవి",
+      "pending": "{0} పెండింగ్‌లో ఉన్నవి",
+      "rejected": "{0} తిరస్కరించబడినవి",
+      "markAttendance": "నేటి హాజరును గుర్తించండి",
+      "enterCode": "హాజరు కోడ్‌ను నమోదు చేయండి",
+      "upcomingEvents": "రాబోయే ఈవెంట్‌లు/పరీక్షలు",
+      "events": {
+        "event1": "మధ్యంతర పరీక్షలు వచ్చే సోమవారం నుండి ప్రారంభమవుతాయి.",
+        "event2": "డేటా స్ట్రక్చర్స్ ప్రాజెక్ట్ సమర్పణకు 2 వారాల గడువు ఉంది."
+      }
+    },
+    "parent": {
+        "pageTitle": "తల్లిదండ్రుల డాష్‌బోర్డ్",
+        "noStudent": "ఈ తల్లిదండ్రుల ఖాతాకు ఏ విద్యార్థి లింక్ చేయబడలేదు.",
+        "studentProfile": "విద్యార్థి ప్రొఫైల్",
+        "rollNo": "రోల్ నెం: {0}",
+        "overallAttendance": "మొత్తం హాజరు",
+        "leaveRequests": "సెలవు అభ్యర్థనలు",
+        "pendingApproval": "అభ్యర్థనలకు మీ ఆమోదం అవసరం",
+        "communicate": "సంప్రదించండి",
+        "contactTeacher": "ఉపాధ్యాయుడిని సంప్రదించండి",
+        "sendMessage": "సందేశం పంపండి (డెమో)",
+        "attendanceTrend": "హాజరు ధోరణి (వారంవారీగా)"
+    }
+  },
+  "studentsPage": {
+    "pageTitle": "విద్యార్థుల నిర్వహణ",
+    "import": "విద్యార్థులను దిగుమతి చేయండి",
+    "add": "విద్యార్థిని జోడించండి",
+    "edit": "విద్యార్థిని సవరించండి",
+    "confirmDelete": "మీరు ఈ విద్యార్థిని తొలగించాలనుకుంటున్నారా?",
+    "searchPlaceholder": "పేరు లేదా రోల్ నంబర్ ద్వారా శోధించండి...",
+    "noStudentsFound": "మీ ప్రమాణాలకు సరిపోయే విద్యార్థులు కనుగొనబడలేదు.",
+    "importModal": {
+      "title": "CSV ద్వారా విద్యార్థులను దిగుమతి చేయండి",
+      "format": "ఫైల్ ఫార్మాట్:",
+      "formatDesc": "CSV ఫైల్ ఈ ఖచ్చితమైన నిలువు వరుసలతో ఒక హెడర్ అడ్డు వరుసను కలిగి ఉండాలి: {0}",
+      "example": "ఉదాహరణ: {0}",
+      "uploadLabel": "CSV ఫైల్‌ను అప్‌లోడ్ చేయండి",
+      "selectFile": "ఫైల్‌ను ఎంచుకోండి",
+      "dragDrop": "లేదా డ్రాగ్ చేసి డ్రాప్ చేయండి",
+      "fileSize": "1MB వరకు CSV",
+      "resultsTitle": "దిగుమతి ఫలితాలు",
+      "success": "{0} విద్యార్థులు విజయవంతంగా దిగుమతి చేయబడ్డారు.",
+      "duplicates": "{0} నకిలీలు కనుగొనబడ్డాయి మరియు వదిలివేయబడ్డాయి.",
+      "errors": "{0} లోపాలు కనుగొనబడ్డాయి:",
+      "invalidHeader": "చెల్లని CSV హెడర్. ఆశించినది: {0}. కనుగొనబడినది: {1}",
+      "wrongColumns": "అడ్డు వరుస {0}: తప్పు నిలువు వరుసల సంఖ్య. ఆశించినది {1}, కనుగొనబడినది {2}.",
+      "emptyFields": "అడ్డు వరుస {0}: అవసరమైన ఖాళీ ఫీల్డ్‌లను కలిగి ఉంది.",
+      "readFileError": "ఫైల్‌ను చదవడంలో విఫలమైంది.",
+      "processing": "ప్రాసెస్ అవుతోంది..."
+    }
+  },
+  "attendancePage": {
+    "pageTitle": "హాజరును గుర్తించండి",
+    "date": "తేదీ",
+    "subjectPeriod": "విషయం/కాలం",
+    "latePresentHint": "సూచన: విద్యార్థి ఆలస్యంగా వచ్చినా తరగతికి హాజరైతే Present మరియు Late రెండింటినీ ఎంచుకోండి.",
+    "markAllPresent": "అందరినీ హాజరుగా గుర్తించండి",
+    "generateCode": "కోడ్ రూపొందించండి",
+    "submit": "హాజరును సమర్పించండి",
+    "submitSuccess": "హాజరు విజయవంతంగా సమర్పించబడింది! (ఇది ఒక డెమో)",
+    "codeModal": {
+      "title": "హాజరు కోడ్‌ను పంచండి",
+      "label": "హాజరు కోడ్",
+      "description": "ఈ సెషన్ కోసం హాజరును గుర్తించడానికి ఈ కోడ్‌ను విద్యార్థులతో పంచండి."
+    }
+  },
+  "reportsPage": {
+    "pageTitle": "హాజరు నివేదికలు",
+    "myReportTitle": "నా హాజరు నివేదిక",
+    "myChildReportTitle": "నా పిల్లల హాజరు నివేదిక",
+    "filterByClass": "తరగతి ద్వారా ఫిల్టర్ చేయండి",
+    "allClasses": "అన్ని తరగతులు",
+    "filterByStudent": "విద్యార్థి ద్వారా ఫిల్టర్ చేయండి",
+    "allStudents": "అన్ని విద్యార్థులు",
+    "downloadCSV": "CSV గా డౌన్‌లోడ్ చేయండి",
+    "summary": "సారాంశం",
+    "detailedRecords": "వివరణాత్మక రికార్డులు",
+    "noRecords": "రికార్డులు కనుగొనబడలేదు."
+  },
+  "leavePage": {
+      "pageTitle": "సెలవు నిర్వహణ",
+      "myRequests": "నా సెలవు అభ్యర్థనలు",
+      "requestLeave": "సెలవు అభ్యర్థించండి",
+      "dates": "తేదీలు: {0} నుండి {1} వరకు",
+      "reason": "కారణం: {0}",
+      "parentStatus": "తల్లిదండ్రులు: {0}",
+      "classInchargeStatus": "క్లాస్ ఇన్‌చార్జ్: {0}",
+      "awaitingParent": "తల్లిదండ్రుల కోసం వేచి ఉంది",
+      "modal": {
+        "title": "సెలవు అభ్యర్థించండి",
+        "startDate": "ప్రారంభ తేదీ",
+        "endDate": "ముగింపు తేదీ",
+        "reason": "కారణం"
+      },
+      "admin": {
+          "student": "విద్యార్థి",
+          "dates": "తేదీలు",
+          "reason": "కారణం",
+          "parentStatus": "తల్లిదండ్రుల స్థితి",
+          "classInchargeStatus": "క్లాస్ ఇన్‌చార్జ్ స్థితి"
+      },
+        "onlyClassIncharge": "సెలవు అభ్యర్థనలను NM mam (క్లాస్ ఇన్‌చార్జ్) మాత్రమే పరిశీలించగలరు.",
+      "parent": {
+          "noStudent": "ఈ ఖాతాకు ఏ విద్యార్థి లింక్ చేయబడలేదు.",
+          "dates": "తేదీలు",
+          "reason": "కారణం",
+          "yourStatus": "మీ స్థితి",
+          "schoolStatus": "పాఠశాల స్థితి"
+      }
+  },
+  "attendanceCodePage": {
+    "pageTitle": "హాజరు కోడ్ నమోదు చేయండి",
+    "codeLabel": "హాజరు కోడ్",
+    "codePlaceholder": "ATD-YYYYMMDD-CLASS-SUBJECT-CHECK",
+    "verifyButton": "కోడ్‌ను ధృవీకరించండి",
+    "resetButton": "రీసెట్",
+    "verifying": "హాజరు కోడ్ ధృవీకరిస్తోంది...",
+    "invalidCode": "చెల్లని హాజరు కోడ్.",
+    "expiredCode": "ఈ హాజరు కోడ్ నేటికి చెల్లదు.",
+    "success": "{0} ({1}) కు హాజరు గుర్తించబడింది."
+  },
+  "timetablePage": {
+      "pageTitle": "తరగతి కాలపట్టిక",
+      "time": "సమయం",
+      "teacherId": "ఉపాధ్యాయ ID: {0}",
+      "class": "తరగతి: {0}",
+      "days": {
+        "Monday": "సోమవారం",
+        "Tuesday": "మంగళవారం",
+        "Wednesday": "బుధవారం",
+        "Thursday": "గురువారం",
+        "Friday": "శుక్రవారం"
+      }
+  }
+}

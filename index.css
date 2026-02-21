@@ -1,0 +1,725 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-gray-50 dark:bg-gray-950 transition-colors duration-200;
+}
+
+:root.theme-ocean {
+  --theme-deep: #0b3558;
+  --theme-primary: #0f766e;
+  --theme-accent: #38bdf8;
+  --theme-highlight: #ccfbf1;
+}
+
+:root.theme-forest {
+  --theme-deep: #1f3a1f;
+  --theme-primary: #2f855a;
+  --theme-accent: #84cc16;
+  --theme-highlight: #fef9c3;
+}
+
+:root.theme-sunset {
+  --theme-deep: #6b2c1a;
+  --theme-primary: #d97706;
+  --theme-accent: #f43f5e;
+  --theme-highlight: #fde68a;
+}
+
+:root.theme-custom {
+  --theme-bg: color-mix(in srgb, var(--theme-accent) 6%, white);
+  --theme-surface: color-mix(in srgb, var(--theme-primary) 4%, white);
+  --theme-soft: color-mix(in srgb, var(--theme-accent) 16%, white);
+  --theme-border: color-mix(in srgb, var(--theme-primary) 20%, white);
+  --theme-text: var(--theme-deep);
+  --theme-muted: color-mix(in srgb, var(--theme-deep) 58%, white);
+  --theme-dark-bg: color-mix(in srgb, var(--theme-deep) 84%, black);
+  --theme-dark-surface: color-mix(in srgb, var(--theme-deep) 68%, var(--theme-primary));
+  --theme-dark-elevated: color-mix(in srgb, var(--theme-deep) 58%, var(--theme-primary));
+  --theme-dark-soft: color-mix(in srgb, var(--theme-deep) 48%, var(--theme-primary));
+  --theme-dark-hover: color-mix(in srgb, var(--theme-dark-soft) 80%, var(--theme-accent));
+  --theme-dark-border: color-mix(in srgb, var(--theme-deep) 60%, var(--theme-accent));
+  --theme-dark-text: color-mix(in srgb, white 92%, var(--theme-accent));
+  --theme-dark-muted: color-mix(in srgb, white 70%, var(--theme-accent));
+}
+
+.theme-custom .bg-white,
+.theme-custom .bg-gray-50,
+.theme-custom .bg-gray-100 {
+  background-color: var(--theme-surface) !important;
+}
+
+.theme-custom .bg-gray-200,
+.theme-custom .bg-gray-300 {
+  background-color: color-mix(in srgb, var(--theme-soft) 72%, white) !important;
+}
+
+.theme-custom .text-gray-900,
+.theme-custom .text-gray-800,
+.theme-custom .text-gray-700 {
+  color: var(--theme-text) !important;
+}
+
+.theme-custom .text-gray-600,
+.theme-custom .text-gray-500,
+.theme-custom .text-gray-400 {
+  color: var(--theme-muted) !important;
+}
+
+.theme-custom .border-gray-200,
+.theme-custom .border-gray-300 {
+  border-color: var(--theme-border) !important;
+}
+
+.theme-custom .divide-gray-100 > :not([hidden]) ~ :not([hidden]),
+.theme-custom .divide-gray-200 > :not([hidden]) ~ :not([hidden]),
+.theme-custom .divide-gray-700 > :not([hidden]) ~ :not([hidden]) {
+  border-color: var(--theme-border) !important;
+}
+
+.theme-custom .hover\:bg-gray-50:hover,
+.theme-custom .hover\:bg-gray-100:hover,
+.theme-custom .hover\:bg-gray-300:hover {
+  background-color: color-mix(in srgb, var(--theme-soft) 68%, white) !important;
+}
+
+.theme-custom .hover\:bg-gray-600:hover,
+.theme-custom .hover\:bg-gray-700:hover,
+.theme-custom .hover\:bg-gray-800:hover {
+  background-color: color-mix(in srgb, var(--theme-primary) 46%, black) !important;
+}
+
+.theme-custom {
+  background-color: var(--theme-bg);
+}
+
+.theme-custom.dark,
+.theme-custom.dark body {
+  background-color: var(--theme-dark-bg);
+}
+
+.theme-custom.dark .dark\:bg-gray-950,
+.theme-custom.dark .dark\:bg-gray-900 {
+  background-color: var(--theme-dark-surface) !important;
+}
+
+.theme-custom.dark .dark\:bg-gray-800,
+.theme-custom.dark .dark\:bg-gray-700 {
+  background-color: var(--theme-dark-elevated) !important;
+}
+
+.theme-custom.dark .dark\:bg-gray-600 {
+  background-color: var(--theme-dark-soft) !important;
+}
+
+.theme-custom.dark .dark\:bg-gray-900\/50 {
+  background-color: color-mix(in srgb, var(--theme-dark-surface) 70%, transparent) !important;
+}
+
+.theme-custom.dark .dark\:text-white,
+.theme-custom.dark .dark\:text-gray-100,
+.theme-custom.dark .dark\:text-gray-200,
+.theme-custom.dark .dark\:text-gray-300,
+.theme-custom.dark .text-gray-900,
+.theme-custom.dark .text-gray-800,
+.theme-custom.dark .text-gray-700,
+.theme-custom.dark .text-gray-600 {
+  color: var(--theme-dark-text) !important;
+}
+
+.theme-custom.dark .dark\:text-gray-400,
+.theme-custom.dark .dark\:text-gray-500,
+.theme-custom.dark .text-gray-500,
+.theme-custom.dark .text-gray-400 {
+  color: var(--theme-dark-muted) !important;
+}
+
+.theme-custom.dark .dark\:border-gray-600,
+.theme-custom.dark .dark\:border-gray-700,
+.theme-custom.dark .dark\:border-gray-800 {
+  border-color: var(--theme-dark-border) !important;
+}
+
+.theme-custom.dark .dark\:divide-gray-600 > :not([hidden]) ~ :not([hidden]),
+.theme-custom.dark .dark\:divide-gray-700 > :not([hidden]) ~ :not([hidden]) {
+  border-color: var(--theme-dark-border) !important;
+}
+
+.theme-custom.dark .dark\:hover\:bg-gray-500:hover,
+.theme-custom.dark .dark\:hover\:bg-gray-600:hover,
+.theme-custom.dark .dark\:hover\:bg-gray-700:hover,
+.theme-custom.dark .dark\:hover\:bg-gray-800:hover {
+  background-color: var(--theme-dark-hover) !important;
+}
+
+.theme-custom.dark .dark\:placeholder-gray-400::placeholder,
+.theme-custom.dark input::placeholder,
+.theme-custom.dark textarea::placeholder {
+  color: var(--theme-dark-muted) !important;
+  opacity: 0.85;
+}
+
+.theme-custom .bg-indigo-600 {
+  background-color: var(--theme-primary) !important;
+}
+
+.theme-custom .bg-blue-600 {
+  background-color: var(--theme-accent) !important;
+}
+
+.theme-custom .text-indigo-600,
+.theme-custom .text-indigo-500 {
+  color: var(--theme-primary) !important;
+}
+
+.theme-custom .text-blue-600,
+.theme-custom .text-blue-500,
+.theme-custom .dark .dark\:text-indigo-400,
+.theme-custom .dark .dark\:text-indigo-500 {
+  color: var(--theme-accent) !important;
+}
+
+.theme-custom .border-indigo-500,
+.theme-custom .focus\:border-indigo-500:focus {
+  border-color: var(--theme-primary) !important;
+}
+
+.theme-custom .ring-indigo-500,
+.theme-custom .focus\:ring-indigo-500:focus,
+.theme-custom.dark .dark\:focus\:ring-indigo-500:focus {
+  --tw-ring-color: var(--theme-accent) !important;
+}
+
+.theme-custom .hover\:bg-indigo-50:hover,
+.theme-custom .bg-indigo-50 {
+  background-color: color-mix(in srgb, var(--theme-accent) 14%, white) !important;
+}
+
+.theme-custom .from-indigo-600 {
+  --tw-gradient-from: var(--theme-deep) var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: color-mix(in srgb, var(--theme-deep) 0%, transparent) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+.theme-custom .to-blue-600 {
+  --tw-gradient-to: var(--theme-accent) var(--tw-gradient-to-position) !important;
+}
+
+.theme-custom .hover\:from-indigo-700:hover {
+  --tw-gradient-from: var(--theme-primary) var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: color-mix(in srgb, var(--theme-primary) 0%, transparent) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+.theme-custom .hover\:to-blue-700:hover {
+  --tw-gradient-to: color-mix(in srgb, var(--theme-accent) 86%, black) var(--tw-gradient-to-position) !important;
+}
+
+.theme-custom .dark .dark\:bg-indigo-900\/20 {
+  background-color: color-mix(in srgb, var(--theme-deep) 80%, transparent) !important;
+}
+
+.theme-custom .dark .dark\:bg-indigo-900\/30 {
+  background-color: color-mix(in srgb, var(--theme-deep) 70%, transparent) !important;
+}
+
+.theme-custom .dark .dark\:bg-indigo-900\/50 {
+  background-color: color-mix(in srgb, var(--theme-deep) 56%, transparent) !important;
+}
+
+.theme-custom .bg-blue-100,
+.theme-custom .bg-blue-50,
+.theme-custom .bg-green-100 {
+  background-color: color-mix(in srgb, var(--theme-accent) 18%, white) !important;
+}
+
+.theme-custom .bg-red-100 {
+  background-color: color-mix(in srgb, var(--theme-primary) 16%, white) !important;
+}
+
+.theme-custom .bg-yellow-100 {
+  background-color: color-mix(in srgb, var(--theme-highlight) 45%, white) !important;
+}
+
+.theme-custom .text-blue-800,
+.theme-custom .text-green-800,
+.theme-custom .text-yellow-800,
+.theme-custom .text-red-800 {
+  color: var(--theme-deep) !important;
+}
+
+.theme-custom .text-red-600,
+.theme-custom .text-green-600,
+.theme-custom .text-yellow-600,
+.theme-custom .hover\:text-red-500:hover,
+.theme-custom .hover\:text-red-600:hover,
+.theme-custom .hover\:text-indigo-500:hover,
+.theme-custom .hover\:text-indigo-600:hover {
+  color: var(--theme-primary) !important;
+}
+
+.theme-custom .dark .dark\:bg-blue-900,
+.theme-custom .dark .dark\:bg-green-900 {
+  background-color: color-mix(in srgb, var(--theme-accent) 36%, var(--theme-deep)) !important;
+}
+
+.theme-custom .dark .dark\:bg-red-900 {
+  background-color: color-mix(in srgb, var(--theme-primary) 52%, black) !important;
+}
+
+.theme-custom .dark .dark\:bg-yellow-900 {
+  background-color: color-mix(in srgb, var(--theme-highlight) 16%, var(--theme-deep)) !important;
+}
+
+.theme-custom .dark .dark\:text-blue-300,
+.theme-custom .dark .dark\:text-green-300,
+.theme-custom .dark .dark\:text-green-400,
+.theme-custom .dark .dark\:text-green-500,
+.theme-custom .dark .dark\:text-red-300,
+.theme-custom .dark .dark\:text-red-400,
+.theme-custom .dark .dark\:text-red-500,
+.theme-custom .dark .dark\:text-yellow-300,
+.theme-custom .dark .dark\:text-yellow-400 {
+  color: var(--theme-dark-text) !important;
+}
+
+.theme-custom .bg-red-400,
+.theme-custom .bg-red-500 {
+  background-color: var(--theme-primary) !important;
+}
+
+/* Smooth transitions for theme switching */
+* {
+  @apply transition-colors duration-200;
+}
+
+/* Card Component Base */
+@layer components {
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-2xl shadow-md dark:shadow-none dark:border dark:border-gray-700 overflow-hidden transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply card hover:shadow-lg dark:hover:shadow-lg hover:scale-105 cursor-pointer transition-transform duration-300;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 rounded-lg font-medium text-white bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-300 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-200;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200;
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-200 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 dark:bg-gray-600 rounded-full hover:bg-gray-500 dark:hover:bg-gray-500;
+}
+
+/* ============== ANIMATION KEYFRAMES ============== */
+
+/* Slide Animations */
+@keyframes slideIn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Fade Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Pulse & Glow Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(99, 102, 241, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.6);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* Bounce Animations */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(-20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Rotate & Spin Animations */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Flip Animation */
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+/* Scale Animations */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+/* Wiggle Animation */
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+}
+
+/* Shake Animation */
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-2px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(2px);
+  }
+}
+
+/* Heartbeat Animation */
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+/* Float Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Rainbow Animation */
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ============== ANIMATION UTILITY CLASSES ============== */
+
+/* Basic Animations */
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.4s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.4s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.4s ease-out;
+}
+
+.animate-slide-in-down {
+  animation: slideInDown 0.3s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-fade-out {
+  animation: fadeOut 0.3s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 1000px 100%;
+}
+
+/* Bounce Animations */
+.animate-bounce {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.animate-bounce-in {
+  animation: bounceIn 0.6s ease-out;
+}
+
+/* Spin Animations */
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.animate-spin-slow {
+  animation: spin 3s linear infinite;
+}
+
+.animate-spin-fast {
+  animation: spin 0.5s linear infinite;
+}
+
+.animate-rotate {
+  animation: rotate 4s linear infinite;
+}
+
+.animate-flip {
+  animation: flip 1s ease-in-out;
+}
+
+/* Scale Animations */
+.animate-scale-in {
+  animation: scaleIn 0.3s ease-out;
+}
+
+.animate-scale-up {
+  animation: scaleUp 0.6s ease-in-out;
+}
+
+/* Wiggles and Shakes */
+.animate-wiggle {
+  animation: wiggle 0.5s ease-in-out infinite;
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Special Effects */
+.animate-heartbeat {
+  animation: heartbeat 1.3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-rainbow {
+  animation: rainbow 3s ease infinite;
+  background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+  background-size: 200% auto;
+}
+
+/* ============== INTERACTIVE ANIMATIONS ============== */
+
+/* Hover lift effect */
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-smooth-fast {
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Stagger Animation Delays */
+.stagger-0 { animation-delay: 0s; }
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+/* Infinite animations with different speeds */
+.animate-infinite-slow {
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.animate-infinite-fast {
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}

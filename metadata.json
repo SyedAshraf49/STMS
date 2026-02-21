@@ -1,0 +1,8 @@
+{
+  "name": "Student Attendance Management System",
+  "description": "A comprehensive system for managing student attendance. Features role-based access for admins, teachers, and students, with functionalities for attendance marking, student management, leave requests, and detailed reporting with visualizations.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ]
+}
